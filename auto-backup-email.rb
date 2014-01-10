@@ -1,0 +1,1 @@
+:local sysname ([/system identity get name]):local time ([/system clock get time]):local date ([/system clock get date])/system backup save name=nazev_zaloha:delay 60/tool e-mail send from=email@mikrotiku.cz to=váš@email.cz server=SMTP_adresa subject=("Mikrotik " . sysname . " Zaloha") body=("Zaloha ze dne " . date . " " . time) file=nazev_zaloha.backup
